@@ -8,6 +8,7 @@ screen = pygame.display.set_mode((screen_width, screen_height), pygame.RESIZABLE
 running = True
 clock = pygame.time.Clock()
 FPS = 60
+bg_color = (63, 112, 26)
 
 
 def inputs(): # controls
@@ -61,7 +62,8 @@ playerSnake = Snake()
 
 while running:
     clock.tick(FPS)
-    screen.fill((63, 112, 26)) # green background
+    screen.fill(bg_color) # green background
     inputs()
     playerSnake.move()
+
     pygame.display.update()
